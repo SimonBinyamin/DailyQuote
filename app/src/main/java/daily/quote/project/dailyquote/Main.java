@@ -22,10 +22,7 @@ public class Main extends AppCompatActivity {
         list = data.LoadData();
         textView = findViewById(R.id.textView);
 
-       // for (int i=0; i < list.size(); i++) {
-         //   textView.setText(list.get(i));
-       // }
-        int random = (int )(Math.random() * 2 + 1);
-        textView.setText(String.valueOf(random));
+        int random = (int )(Math.random() * list.size() + 0);
+        textView.setText("''" + list.get(random) + "''");
     }
 }
